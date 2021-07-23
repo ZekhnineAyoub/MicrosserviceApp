@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MarketManager" />
+        <module name="MembershipManager" />
+        <module name="EducationManager" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EducationManager" target="11" />
+      <module name="MarketManager" target="11" />
+      <module name="MembershipManager" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EducationManager" options="-parameters" />
+      <module name="MarketManager" options="-parameters" />
+      <module name="MembershipManager" options="-parameters" />
+    </option>
+  </component>
+</project>
