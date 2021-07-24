@@ -2,8 +2,10 @@ package com.example.MarketManager.Projects.Service;
 
 import com.example.MarketManager.Projects.Model.Project;
 import com.example.MarketManager.Projects.Repository.ProjectRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,9 @@ import java.util.Optional;
 public class ProjectService {
 
     private final ProjectRepository projectRepository;
+
+    private RestTemplate restTemplate;
+
 
     @Autowired
     public ProjectService(ProjectRepository projectRepository) {
@@ -39,4 +44,6 @@ public class ProjectService {
 
         projectRepository.deleteById(id);
     }
+
+
 }

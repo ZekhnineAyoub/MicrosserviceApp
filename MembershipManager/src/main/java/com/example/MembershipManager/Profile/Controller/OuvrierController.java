@@ -27,14 +27,12 @@ public class OuvrierController {
     }
 
     @GetMapping("/")
-
     public List<Ouvrier> GetAllOuvrier(){
 
         return  ouvrierService.findAllOuvrier();
     }
 
     @GetMapping("/{id}")
-
     public Optional<Ouvrier> GetOuvrierById(@PathVariable Long id){
 
         return ouvrierService.GetOuvrierById(id);

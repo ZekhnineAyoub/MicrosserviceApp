@@ -3,9 +3,12 @@ package com.example.MarketManager.Projects.Controller;
 
 import com.example.MarketManager.Projects.Model.Project;
 import com.example.MarketManager.Projects.Service.ProjectService;
+import com.example.MarketManager.Projects.VO.Ouvrier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,10 +17,12 @@ import java.util.Optional;
 public class ProjectController {
 
     private final ProjectService projectService;
+
     @Autowired
     public ProjectController(ProjectService projectService) {
         this.projectService = projectService;
     }
+
 
     @PostMapping("/")
     public void AddNewProject(@RequestBody Project project){
@@ -42,8 +47,16 @@ public class ProjectController {
     public void DeleteProjectById(@PathVariable Long id){
 
         projectService.DeleteProject(id);
-
     }
+
+
+
+
+
+
+
+
+
 
 
 }
