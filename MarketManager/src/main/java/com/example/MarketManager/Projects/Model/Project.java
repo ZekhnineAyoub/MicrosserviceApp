@@ -1,6 +1,7 @@
 package com.example.MarketManager.Projects.Model;
 
 
+import com.example.MarketManager.Projects.Enums.Metier;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,20 +21,31 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long  Id;
-    private String metier;
+    private Metier metier;
     private String competence;
     private String localisation;
     private Long  tauxJournaliers;
     private String dureeEngagement;
 
 
-
-    public Project(String metier, String competence, String localisation, Long tauxJournaliers, String dureeEngagement) {
+    public Project(Metier metier, String competence, String localisation, Long tauxJournaliers, String dureeEngagement) {
         this.metier = metier;
         this.competence = competence;
         this.localisation = localisation;
         this.tauxJournaliers = tauxJournaliers;
         this.dureeEngagement = dureeEngagement;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "Id=" + Id +
+                ", metier=" + metier +
+                ", competence='" + competence + '\'' +
+                ", localisation='" + localisation + '\'' +
+                ", tauxJournaliers=" + tauxJournaliers +
+                ", dureeEngagement='" + dureeEngagement + '\'' +
+                '}';
     }
 
     public Long getId() {
@@ -44,11 +56,11 @@ public class Project {
         Id = id;
     }
 
-    public String getMetier() {
+    public Metier getMetier() {
         return metier;
     }
 
-    public void setMetier(String metier) {
+    public void setMetier(Metier metier) {
         this.metier = metier;
     }
 

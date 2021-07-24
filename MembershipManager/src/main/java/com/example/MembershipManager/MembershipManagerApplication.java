@@ -8,7 +8,6 @@ public class MembershipManagerApplication {
 
 	public static void main(String[] args) {
 
-		System.out.println("system 3");
 		SpringApplication.run(MembershipManagerApplication.class, args);
 	}
 
